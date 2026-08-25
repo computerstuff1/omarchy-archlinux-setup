@@ -54,6 +54,12 @@ That's it. The script:
 of anything it overwrites (`shell.json`, `plugins/`, fastfetch), later runs just
 refresh everything to this repo's state. It never deletes your personal settings.
 
+> **Note:** the "Applying theme" step may pause for up to ~30 seconds — this is
+> normal. The theme actually swaps in within a couple of seconds; the pause is
+> Omarchy's post-apply app re-tinting stalling, which the script caps with a
+> timeout. If you want, verify afterwards with `omarchy theme current` and
+> `hyprctl configerrors`.
+
 ---
 
 ## Customizing

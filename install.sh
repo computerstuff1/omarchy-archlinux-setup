@@ -78,7 +78,7 @@ if [[ -d "$REPO_DIR/dotfiles" ]]; then
 fi
 
 # 4. Apply
-echo "==> Applying theme"
+echo "==> Applying theme (may pause briefly - this is normal)"
 timeout 30 omarchy theme set "$THEME_NAME" >/dev/null 2>&1 || true
 hyprctl reload >/dev/null 2>&1 || true
 
