@@ -18,7 +18,7 @@
     "break",
     {
       "type": "custom",
-      "format": "\u001b[90m┌─────────────────Hardware─────────────────┐"
+      "format": "\u001b[38;2;171;254;255mHardware\u001b[0m"
     },
     {
       "type": "host",
@@ -58,14 +58,10 @@
       "key": "└ └󰓡 ",
       "keyColor": "#abfeff"
     },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└──────────────────────────────────────────┘"
-    },
     "break",
     {
       "type": "custom",
-      "format": "\u001b[90m┌─────────────────Software─────────────────┐"
+      "format": "\u001b[38;2;171;254;255mSoftware\u001b[0m"
     },
     {
       "type": "command",
@@ -126,14 +122,10 @@
       "key": "└ └",
       "keyColor": "#abfeff"
     },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└──────────────────────────────────────────┘"
-    },
     "break",
     {
       "type": "custom",
-      "format": "\u001b[90m┌───────────Age / Uptime / Update───────────┐"
+      "format": "\u001b[38;2;171;254;255mAge / Uptime / Update\u001b[0m"
     },
     {
       "type": "command",
@@ -151,10 +143,6 @@
       "key": " Update",
       "keyColor": "#abfeff",
       "text": "updated=$(omarchy-version-pkgs); echo \"$updated\""
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└──────────────────────────────────────────┘"
     },
     "break"
   ]
