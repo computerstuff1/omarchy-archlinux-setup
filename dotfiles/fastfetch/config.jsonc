@@ -6,7 +6,7 @@
     "color": { "1": "#1793D1" },
     "padding": {
       "top": 2,
-      "right": 2,
+      "right": 6,
       "left": 2
     }
   },
@@ -18,131 +18,143 @@
     "break",
     {
       "type": "custom",
-      "format": "\u001b[38;2;171;254;255mHardware\u001b[0m"
+      "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
     },
     {
       "type": "host",
       "key": " PC",
-      "keyColor": "#abfeff"
+      "keyColor": "green"
     },
     {
       "type": "cpu",
       "key": "│ ├",
       "showPeCoreCount": true,
-      "keyColor": "#abfeff"
+      "keyColor": "green"
     },
     {
       "type": "gpu",
       "key": "│ ├",
       "detectionMethod": "pci",
       "format": "{name}",
-      "keyColor": "#abfeff"
+      "keyColor": "green"
     },
     {
       "type": "display",
       "key": "│ ├󱄄",
-      "keyColor": "#abfeff"
+      "keyColor": "green"
     },
     {
       "type": "disk",
       "key": "│ ├󰋊",
-      "keyColor": "#abfeff"
+      "keyColor": "green"
     },
     {
       "type": "memory",
       "key": "│ ├",
-      "keyColor": "#abfeff"
+      "keyColor": "green"
     },
     {
       "type": "swap",
       "key": "└ └󰓡 ",
-      "keyColor": "#abfeff"
+      "keyColor": "green"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
     },
     "break",
     {
       "type": "custom",
-      "format": "\u001b[38;2;171;254;255mSoftware\u001b[0m"
+      "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
     },
     {
       "type": "command",
       "key": "\ue900 OS",
-      "keyColor": "#abfeff",
+      "keyColor": "blue",
       "text": "version=$(omarchy-version) && echo \"Omarchy $version\""
     },
     {
       "type": "command",
       "key": "│ ├󰘬",
-      "keyColor": "#abfeff",
+      "keyColor": "blue",
       "text": "omarchy-version-branch"
     },
     {
       "type": "command",
       "key": "│ ├󰔫",
-      "keyColor": "#abfeff",
+      "keyColor": "blue",
       "text": "channel=$(omarchy-version-channel); echo \"$channel\""
     },
     {
       "type": "kernel",
       "key": "│ ├",
-      "keyColor": "#abfeff"
+      "keyColor": "blue"
     },
     {
       "type": "wm",
       "key": "│ ├",
-      "keyColor": "#abfeff"
+      "keyColor": "blue"
     },
     {
       "type": "de",
       "key": " DE",
-      "keyColor": "#abfeff"
+      "keyColor": "blue"
     },
     {
       "type": "terminal",
       "key": "│ ├",
-      "keyColor": "#abfeff"
+      "keyColor": "blue"
     },
     {
       "type": "packages",
       "key": "│ ├󰏖",
-      "keyColor": "#abfeff"
+      "keyColor": "blue"
     },
     {
       "type": "wmtheme",
       "key": "│ ├󰉼",
-      "keyColor": "#abfeff"
+      "keyColor": "blue"
     },
     {
       "type": "command",
       "key": "│ ├󰸌",
-      "keyColor": "#abfeff",
+      "keyColor": "blue",
       "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38m●\\e[37m●\\e[36m●\\e[35m●\\e[34m●\\e[33m●\\e[32m●\\e[31m●\""
     },
     {
       "type": "terminalfont",
       "key": "└ └",
-      "keyColor": "#abfeff"
+      "keyColor": "blue"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
     },
     "break",
     {
       "type": "custom",
-      "format": "\u001b[38;2;171;254;255mAge / Uptime / Update\u001b[0m"
+      "format": "\u001b[90m┌────────────────Age / Uptime / Update───────────────┐"
     },
     {
       "type": "command",
       "key": "󱦟 OS Age",
-      "keyColor": "#abfeff",
+      "keyColor": "magenta",
       "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days"
     },
     {
       "type": "uptime",
       "key": "󱫐 Uptime",
-      "keyColor": "#abfeff"
+      "keyColor": "magenta"
     },
     {
       "type": "command",
       "key": " Update",
-      "keyColor": "#abfeff",
+      "keyColor": "magenta",
       "text": "updated=$(omarchy-version-pkgs); echo \"$updated\""
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
     },
     "break"
   ]
