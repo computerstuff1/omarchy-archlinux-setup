@@ -4,6 +4,7 @@
     "type": "file",
     "source": "~/.config/omarchy/branding/about.txt",
     "color": { "1": "#1793D1" },
+    "height": 16,
     "padding": {
       "top": 2,
       "right": 6,
