@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/omarchy/themes"
 THEME_NAME="archlinux"
 THEME_PATH="$THEMES_DIR/$THEME_NAME"
 MARKER="$HOME/.config/omarchy/.archlinux-dotfiles-installed"
-BLUR_MARKER="# Archlinux theme - frosted glass"
+BLUR_MARKER='namespace = "omarchy-bar".*blur = true'
 
 echo "==> Archlinux Omarchy setup"
 
@@ -30,20 +30,20 @@ fi
 
 # 2. Frosted glass: blur translucent surfaces + the bar layer
 LOOKNFEEL="$HOME/.config/hypr/looknfeel.lua"
-if ! grep -qF "$BLUR_MARKER" "$LOOKNFEEL" 2>/dev/null; then
+if ! grep -qE "$BLUR_MARKER" "$LOOKNFEEL" 2>/dev/null; then
   if [[ -f "$LOOKNFEEL" ]]; then
     cp "$LOOKNFEEL" "$LOOKNFEEL.bak.$(date +%s)"
-    cat >> "$LOOKNFEEL" <<EOF
+    cat >> "$LOOKNFEEL" <<'EOF'
 
-$BLUR_MARKER
+-- Archlinux theme - frosted glass
 hl.config({ decoration = { blur = { enabled = true, size = 8, passes = 3 } } })
 hl.layer_rule({ match = { namespace = "omarchy-bar" }, blur = true, blur_popups = true })
 EOF
   else
     mkdir -p "$HOME/.config/hypr"
-    cat > "$LOOKNFEEL" <<EOF
+    cat > "$LOOKNFEEL" <<'EOF'
 -- Look'n'feel (created by omarchy-archlinux-setup)
-$BLUR_MARKER
+-- Archlinux theme - frosted glass
 hl.config({ decoration = { blur = { enabled = true, size = 8, passes = 3 } } })
 hl.layer_rule({ match = { namespace = "omarchy-bar" }, blur = true, blur_popups = true })
 EOF
