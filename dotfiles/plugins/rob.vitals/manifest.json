@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "rob.vitals",
+  "name": "Vitals",
+  "version": "1.0.0",
+  "author": "rob",
+  "description": "CPU, memory and disk usage in the bar. Click to toggle which metrics are shown.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Vitals.qml"
+  },
+  "barWidget": {
+    "displayName": "Vitals",
+    "description": "CPU, memory and disk usage in the bar; click for display settings",
+    "category": "System",
+    "allowMultiple": false,
+    "defaults": {
+      "showCpu": true,
+      "showMem": true,
+      "showDisk": true
+    },
+    "schema": [
+      { "key": "showCpu", "type": "boolean", "label": "Show CPU", "defaultValue": true },
+      { "key": "showMem", "type": "boolean", "label": "Show memory", "defaultValue": true },
+      { "key": "showDisk", "type": "boolean", "label": "Show disk", "defaultValue": true }
+    ]
+  }
+}

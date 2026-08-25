@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "rob.system-updates",
+  "name": "System Updates",
+  "version": "1.0.0",
+  "author": "rob",
+  "description": "Shows a pacman icon with the number of pending system updates (repos + AUR)",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "SystemUpdates.qml"
+  },
+  "barWidget": {
+    "displayName": "System Updates",
+    "description": "Pacman icon with pending update count",
+    "category": "System",
+    "allowMultiple": false
+  }
+}

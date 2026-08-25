@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Count pending system updates (official repos + AUR) and print the number.
+
+set -uo pipefail
+
+repo=$(timeout 60 checkupdates --nocolor 2>/dev/null | wc -l)
+
+aur=0
+if command -v yay >/dev/null 2>&1; then
+  aur=$(timeout 60 yay -Qua --quiet 2>/dev/null | wc -l)
+fi
+
+echo $(( repo + aur ))

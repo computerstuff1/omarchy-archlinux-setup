@@ -1,0 +1,44 @@
+# Archlinux theme palette for Omarchy v4.
+mode = "dark"
+
+# Core accent — the main interactive color.
+accent = "#abfeff"
+
+# Hyprland border gradient — subtle frosted borders.
+hyprland_active_border   = "#BEFDFD #56878F 45deg"
+hyprland_inactive_border = "#2c3547"
+
+# Primary surfaces — dusky navy.
+background = "#1a1f2b"
+foreground = "#dcd6ce"
+
+# Surface scale.
+dark_background    = "#12151e"
+darker_background  = "#0b0d13"
+lighter_background = "#242b3a"
+
+# Foreground scale.
+dark_foreground   = "#948e91"
+light_foreground  = "#e8e3da"
+bright_foreground = "#f5f1e8"
+
+# Selection / muted.
+selection = "#2c3547"
+muted     = "#262d3a"
+
+# Hue palette — soft, desaturated twilight colors.
+red     = "#aaf1ff"
+yellow  = "#cbfff9"
+green   = "#0397a4"
+cyan    = "#77e0f8"
+blue    = "#e3e3e3"
+magenta = "#E2F6FF"
+brown   = "#8a6a52"
+orange  = "#e0916a"
+
+bright_red     = "#d9836f"
+bright_yellow  = "#ecc98c"
+bright_green   = "#96b8a4"
+bright_cyan    = "#85b7c0"
+bright_blue    = "#8ba5c4"
+bright_magenta = "#c29ebd"
