@@ -40,7 +40,7 @@ omarchy-archlinux-setup/
 ```bash
 git clone https://github.com/computerstuff1/omarchy-archlinux-setup
 cd omarchy-archlinux-setup
-./install.sh
+./install.sh   DON'T USE
 ```
 
 That's it. The script:
